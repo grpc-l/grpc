@@ -139,8 +139,12 @@ void PrintMethodDeclarations(Printer *printer, const MethodDescriptor *method) {
   PrintProtoRpcDeclarationAsPragma(printer, method, vars);
 
   PrintSimpleSignature(printer, method, vars);
+  printer->Print(" ");
+  printer->Print("NS_REFINED_FOR_SWIFT");
   printer->Print(";\n\n");
   PrintAdvancedSignature(printer, method, vars);
+  printer->Print(" ");
+  printer->Print("NS_REFINED_FOR_SWIFT");
   printer->Print(";\n\n\n");
 }
 
